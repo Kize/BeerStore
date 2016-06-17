@@ -1,0 +1,178 @@
+[
+  {
+    "name"    : "Karmeliet Triple",
+    "desc"    : "Inchangée depuis 1679, la Triple Karmeliet rencontre toujours autant de succès. Orge, froment et avoine, ces trois céréales donnent à cette bière blonde son goût raffiné et complexe. N'attendez plus pour la tester!",
+    "alcohol" : 8,
+    "price"   : 2.50,
+    "url_img" : "https://img.saveur-biere.com/img/p/82-14662-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Cuvée des Trolls",
+    "desc"    : "Elle intègre évidemment tous les critères de qualité des bières de la brasserie Dubuisson, c'est-à-dire un brassage traditionnel, sans aucun additif avec un caractère indéniable. La Cuvée des Trolls est aromatisée avec des écorces d’oranges séchées. Celles-ci sont ajoutées au moût lors de l’ébullition. Elles donnent à la cette bière note de fraîcheur et des arômes particulièrement agréables et fruités. Au palais, la Cuvée des Trolls présente une rondeur constituée à la fois de goûts et de saveurs assez relevés, mais particulièrement bien équilibrés. L’amertume, l’acidité et le sucré s’équilibrent parfaitement et donne ainsi une bière goûteuse et sans aspérités désagréables.",
+    "alcohol" : 7,
+    "price"   : 1.50,
+    "url_img" : "https://img.saveur-biere.com/img/p/126-14990-thickbox.jpg"
+  },
+  {
+    "name"    : "Orval",
+    "desc"    : "Bière trappiste de dégustation, Orval dévoile un arôme houblonné intense et une pointe d'acidité . Cette bière révèle des arômes différents en fonction de la température à laquelle elle est servie, les amateurs sauront l'apprécier à sa juste valeur.",
+    "alcohol" : 6.2,
+    "price"   : 2.80,
+    "url_img" : "https://img.saveur-biere.com/img/p/81-14420-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Kwak",
+    "desc"    : "Kwak est une bière qui a marqué les esprits de tout amateur de bière qui se respecte. Vous pouvez dès à présent retrouver cette bière savoureuse chez vous, l'essayer c'est l'adopter!",
+    "alcohol" : 8.1,
+    "price"   : 2.10,
+    "url_img" : "https://img.saveur-biere.com/img/p/104-16465-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Rochefort 10",
+    "desc"    : "La Trappiste la plus alcoolisée de l'Abbaye de Rochefort présente un mélange d'arômes très complexe, pour un résultat tout en finesse. Puissante, noble, racée, équilibrée, voilà qui résume cette trappiste. Une bière qui n'a pas volé son surnom.",
+    "alcohol" : 11.3,
+    "price"   : 3.40,
+    "url_img" : "https://img.saveur-biere.com/img/p/91-14652-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Westmalle Triple",
+    "desc"    : "Cette bière belge est en effet l'une des premières bières à avoir été brassées sous l'appellation de \"bière triple\" et elle est le fruit d'une sélection rigoureuse des ingrédients entrant dans sa composition. De nombreux houblons interviennent ainsi ici pour aromatiser et donner l'amertume à cette bière d'exception. De plus, la levure utilisée est la même depuis 1956 et elle influe grandement dans la complexité aromatique et gustative de cette trappiste.",
+    "alcohol" : 9.5,
+    "price"   : 2.70,
+    "url_img" : "https://img.saveur-biere.com/img/p/89-162-thickbox.jpg"
+  },
+  {
+    "name"    : "Barbar au miel",
+    "desc"    : "La brasserie Lefebvre pousse le respect des traditions à son paroxysme en incluant le miel parmi les ingrédients de sa bière blonde. L'équilibre de cette bière est remarquable, entre le malté et le sucré. Une bière qui mérite d'être connue !",
+    "alcohol" : 8,
+    "price"   : 2.40,
+    "url_img" : "https://img.saveur-biere.com/img/p/103-16445-cat_img_sb3.jpg"
+  },
+  {
+  "name"    : "Delirium Tremens",
+  "desc"    : "Bière phare de la brasserie tricentenaire Huyghe, cette bière blonde forte marque les esprits grâce à son goût épicé et légèrement acide et à sa bouteille au design coloré.",
+  "alcohol" : 8.5,
+  "price"   : 3.20,
+  "url_img" : "https://img.saveur-biere.com/img/p/110-16755-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Rince Cochon",
+    "desc"    : "Le caractère de cette bière blonde forte se cache dans une robe jaune pâle qui évoque habituellement les pils aux faibles degrés. Pourtant avec ses 8,5°, elle est loin des Pils et autre lager Beer ! Cette robe se couvre d'une tête de mousse blanche à l'épaisseur moyenne et à la bonne tenue dans le verre.",
+    "alcohol" : 8.5,
+    "price"   : 2.70,
+    "url_img" : "https://img.saveur-biere.com/img/p/1074-1175-thickbox.jpg"
+  },
+  {
+    "name"    : "Gulden Draak",
+    "desc"    : "Avec sa bouteille blanche aux allures sages. ce n'est qu'une fois dans un verre qu'elle révèle sa vraie nature de bière brune : Chocolat noir, malts torréfiés, amertume houblonnée... Une bière parmi les meilleures de Belgique !",
+    "alcohol" : 10.7,
+    "price"   : 2.60,
+    "url_img" : "https://img.saveur-biere.com/img/p/57-15069-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Chimay Bleue",
+    "desc"    : "La Chimay Bleue est la plus forte et la plus complexe des bières trappistes de l'abbaye de Notre Dame de Scourmont Elle offre un bouquet d'épices et un nez fruité, très caractéristique de la Chimay. En bouche, elle procure une longue amertume et traduit une torréfaction prononcée.",
+    "alcohol" : 9,
+    "price"   : 2.90,
+    "url_img" : "https://img.saveur-biere.com/img/p/87-159-thickbox.jpg"
+  },
+  {
+    "name"    : "Westmalle Dubbel Brune",
+    "desc"    : "La Westmalle Double Brune est une bière belge brassée à l'abbaye trappiste de N.D de la Trappe du Sacré Cœur. C'est une bière de couleur acajou qui développe dans le verre une mousse abondante et persistante de couleur beige. Cette coloration est due à la double dose de malt utilisée pour brasser cette Westmalle.",
+    "alcohol" : 6.5,
+    "price"   : 2.40,
+    "url_img" : "https://img.saveur-biere.com/img/p/88-161-thickbox.jpg"
+  },
+  {
+    "name"    : "Lindemans Kriek",
+    "desc"    : "Cette Lindemans Kriek est une bière fruitée qui, lors de la production, va bénéficier d'un apport en fruits avant d'être placée en vieillissement dans des fûts de chêne. Cela permet aux fruits d'infuser dans le breuvage et cela entraîne une refermentation de la bière pendant cette période de maturation. Cela donne une bière rouge clair avec une énorme tête de mousse rose.",
+    "alcohol" : 3.5,
+    "price"   : 1.90,
+    "url_img" : "https://img.saveur-biere.com/img/p/736-14700-thickbox.jpg"
+  },
+  {
+    "name"    : "Duvel",
+    "desc"    : "La bière Duvel est une bière belge fruitée dont la réputation n'est plus à faire ! Comment présenter ce monument de la bière Belge qu'est la Duvel ! Autrefois vendue sous le nom de Victory Ale, cette bière qui sera ensuite surnommé \"le Diable en bouteille\" finira par portée avec fierté ce sobriquet puisque le mot \"Duvel\" signifie \"diable\" en patois flamand !Produite depuis 1918 par la Brasserie belge Moortgat, cette bière est une belle réussite très bien équilibrée.",
+    "alcohol" : 8.5,
+    "price"   : 2.70,
+    "url_img" : "https://img.saveur-biere.com/img/p/107-15017-thickbox.jpg"
+  },
+  {
+    "name"    : "Rodenbach",
+    "desc"    : "La brasserie Rodenbach est riche d’une longue histoire brassicole. Elle fut fondée en 1820 par 4 frères. C’est Eugène Robenbach, l’un des descendant qui rammenera d’Angleterre les secrets de maturation en fût de chêne. Depuis 1998, elle est la propriété de la brasserie Palm Jan Toyes, qui s’emploie à perpétuer ce style unique de bière belge.",
+    "alcohol" : 5.2,
+    "price"   : 1.70,
+    "url_img" : "https://img.saveur-biere.com/img/p/263-14505-product_img_sb3.jpg"
+  },
+  {
+    "name"    : "La Chouffe",
+    "desc"    : "La chouffe est une belgian Pale Ale blonde non filtrée et refermentée. Derrière une robe couleur or, on découvre avec enchantement un bouquet aromatique à la fois fruitée et épicé. Sur le palais, on retrouve les notes épicées déjà présente au nez avec des touches de coriandre. Les houblons apportent une agréable amertume en fin de bouche. Cette bière agréablement fruitée et épicée se fera la compagne idéale d’un poisson blanc ou d’une volaille. N’hésitez pas non plus à l’associer à un fromage à pâte molle.",
+    "alcohol" : 8,
+    "price"   : 2.80,
+    "url_img" : "https://img.saveur-biere.com/img/p/1481-16387-product_img_sb3.jpg"
+  },
+  {
+    "name"    : "Kasteel Rouge",
+    "desc"    : "La Kasteel (bière du château) est une bière brassée par la brasserie Van Honsebrouck. Le château visible sur l'étiquette de la bouteille est celui d'Ingelmunster. Ce magnifique édifice a été racheté en 1986 par la famille Van Honsebrouck. Il est ouvert au public et le parc et les caves du château peuvent être visités.",
+    "alcohol" : 8,
+    "price"   : 2.40,
+    "url_img" : "https://img.saveur-biere.com/img/p/1154-13852-thickbox.jpg"
+  },
+  {
+    "name"    : "St Stephanus",
+    "desc"    : "Brassée depuis 1295, cette bière blonde non pasteurisée à fermentation haute est ensuite refermentée en bouteille pour trois mois. Sa maturation peut continuer jusqu'à deux ans et demi pour découvrir toutes les nuances qu'offre cette bière belge.",
+    "alcohol" : 7,
+    "price"   : 2.90,
+    "url_img" : "https://img.saveur-biere.com/img/p/2149-14396-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Maredsous Triple 10",
+    "desc"    : "Bière brassée dans le respect de la tradition Bénédictine. Sa douceur contraste avec sa forte teneur en alcool, le tout en restant parfaitement équilibrée. Venez la découvrir chez nous !",
+    "alcohol" : 10,
+    "price"   : 2.90,
+    "url_img" : "https://img.saveur-biere.com/img/p/1155-16396-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "La Corne du Bois des Pendus Triple",
+    "desc"    : "La Corne du Bois des Pendus triple est une bière blonde de dégustation puissante, puisqu'elle est titrée à 10%. Elle possède une robe blonde cuivrée et pétillante, ainsi qu'une belle mousse blanche très généreuse.",
+    "alcohol" : 10,
+    "price"   : 3.00,
+    "url_img" : "https://img.saveur-biere.com/img/p/3593-16186-thickbox.jpg"
+  },
+  {
+    "name"    : "Brugge Triple",
+    "desc"    : "La Brugge triple est une bière ambrée originaire de la vieille ville de Bruges en Belgique, qui fût longtemps une place forte de la bière Belge et qui conserve aujourd'hui un grand patrimoine brassicole. . La Brugge triple est une bière qui vieillit en fûts avant sa mise en bouteille, ce qui lui assure une qualité gustative accrue et des notes sûres. Cette blonde ambrée de fermentation haute possède un nez fruité qui s'accompagne de notes de caramel et de malt. En bouche, elle développe un goût de miel agréable. Il est conseillé de la savourer dans un verre très haut.",
+    "alcohol" : 8.7,
+    "price"   : 2.60,
+    "url_img" : "https://img.saveur-biere.com/img/p/120-14044-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Ciney Blonde",
+    "desc"    : "La bière Ciney blonde est une bière Belge dont la réputation dépasse largement les frontières du Plat Pays ! Brassée depuis 1980, cette bière blonde de fermentation haute a rapidement convaincu les amateurs de bière Belge grâce à son bel équilibre !",
+    "alcohol" : 7,
+    "price"   : 2.30,
+    "url_img" : "https://img.saveur-biere.com/img/p/96-14973-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Saint Feuillien Blonde",
+    "desc"    : "La St feuillien est une bière jeune mais déjà reconnue Son nez délivre des notes herbacées très complexes comme : le citron vert, le céleri, le coriandre, les baies de genévrier, les agrumes... Le malt et le houblon font également parti de l'effluve. Elle laisse une amertume en arrière goût. Une bière à déguster dans son verre St Feuillien.",
+    "alcohol" : 7.5,
+    "price"   : 2.50,
+    "url_img" : "https://img.saveur-biere.com/img/p/122-14583-cat_img_sb3.jpg"
+  },
+  {
+    "name"    : "Wittekerke Rosé",
+    "desc"    : "C'est une bière blanche à la base, curieusement rosée à fermentation haute et non filtrée issue de la Brasserie Bavik à Bavikhove en Belgique. Son goût est doux au palais grâce à une saveur de framboise parfaitement reconnaissable. Elle est rafraîchissante, moelleuse avec une mousse blanche et pétillante. C'est une bière différente qui plait énormément aux femmes. Elle accompagne divinement les desserts. ",
+    "alcohol" : 7.5,
+    "price"   : 2.00,
+    "url_img" : "http://cdn.shopify.com/s/files/1/0170/5986/products/Wittekerke_Rose-25-1_1024x1024.jpg?v=1422226519"
+  },
+  {
+    "name"    : "Saint Bernadus Abt 12",
+    "desc"    : "Elue meilleure bière du monde en 2005, cette Quadrupel a la particularité d'être brassée comme une bière trappiste. Bière forte et fruitée, cette bière de dégustation plaira aux fins connaisseurs qui sauront apprécier la richesse de ses arômes.",
+    "alcohol" : 10,
+    "price"   : 2.80,
+    "url_img" : "https://img.saveur-biere.com/img/p/94-13755-cat_img_sb3.jpg"
+  }
+
+]

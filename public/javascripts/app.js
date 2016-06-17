@@ -1,9 +1,9 @@
+'use strict';
+
 var myApp = angular.module('beerApp', [
   'ngRoute',
-  'ui.bootstrap',
+  'ui.bootstrap'
 
-  'beerApp.productModule',
-  'beerApp.cartModule'
 ]).config(function ($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     templateUrl: './partials/products'
