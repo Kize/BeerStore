@@ -6,6 +6,8 @@ logs
 npm-debug.log*
 
 node_modules
+web
+/bower_components
 
 # IntelliJ project files
 .idea
