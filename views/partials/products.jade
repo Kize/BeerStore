@@ -1,1 +1,15 @@
-p This is the partial for view 1.
+div.gallery(ng-controller='productController')
+  div.product(ng-repeat='product in products')
+    div.row
+      div.col-xs-6.col-md-4
+        img.gallery-icon(ng-src='{{product.url_img}}' alt="{{product.name}}")
+      div.col-xs-6.col-md-8
+        p Prix : {{product.price}} €
+        p Degré : {{product.alcohol}}°
+        p
+          a.btn.btn-primary(role="button" ng-click="") Ajouter au panier
+
+    div.caption.line-clamp
+      h3 {{product.name}}
+      p {{product.desc}}
+

@@ -6,3 +6,41 @@ body {
 a {
   color: #00B7FF;
 }
+
+.content {
+  margin: 0 5%;
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.product {
+  width: 300px;
+  height: 250px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #dddddd;
+
+}
+
+.gallery-icon {
+  max-height: 100px;
+}
+.caption {
+  width: 280px;
+  overflow: hidden;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 120px;
+}

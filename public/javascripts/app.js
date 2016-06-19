@@ -16,4 +16,4 @@ var myApp = angular.module('beerApp', [
 
 });
 
-myApp.value('API_URL', 'toto');
+myApp.value('API_URL', 'api/products');
