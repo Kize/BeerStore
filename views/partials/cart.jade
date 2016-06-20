@@ -1,4 +1,26 @@
-p This is the partial for view 2.
-p
-  | Showing of 'interpolate' filter:
-  | {{ 'Current version is v%VERSION%.' | interpolate }}
+div.cart-container(ng-controller='CartController')
+  h2.modal-title Mon panier
+
+  table.table.table-striped(st-table='cart.products')
+    thead
+      tr.row-header
+        td Bières :
+        td Degré :
+        td Prix :
+        td Quantité :
+        td Total :
+
+    tbody
+      tr(ng-repeat='beer in cart.products')
+        td {{beer.name}}
+        td {{beer.alcohol}} °
+        td {{beer.price | number: 2}} €
+        td {{beer.quantity}}
+        td {{(beer.price * beer.quantity) | number: 2}} €
+
+      tr.row-total
+        td
+        td
+        td
+        td Total
+        td.cell-total {{cart.total | number: 2}} €

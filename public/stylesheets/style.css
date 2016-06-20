@@ -8,7 +8,11 @@ a {
 }
 
 .content {
-  margin: 0 5%;
+  margin: 5% 5%;
+}
+
+.cart-container {
+  margin: 5% 15%;
 }
 
 .title {
@@ -16,6 +20,25 @@ a {
   text-align: center;
 }
 
+/* Cart View */
+.cart-container {
+  margin: 5% 15%;
+}
+
+.row-total {
+  font-weight: bolder;
+}
+
+.row-header {
+  font-weight: bolder;
+}
+
+.cell-total {
+  color: red;
+}
+
+
+/* Product view */
 .gallery {
   clear: right;
   overflow: hidden;

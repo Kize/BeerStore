@@ -1,5 +1,5 @@
 div(ng-controller='ProductController')
-  a.btn.btn-lg.btn-info.cart-button(role="button" ng-click="") Panier ({{cart.nbProducts}})
+  a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/cart") Panier ({{cart.nbProducts}})
 
   script(type="text/ng-template" id="productModal.html")
     div.modal-header
@@ -8,7 +8,7 @@ div(ng-controller='ProductController')
     div.modal-body
       img(ng-src='{{product.url_img}}' alt="{{product.name}}")
       p {{product.desc}}
-      p Prix : {{product.price}} €
+      p Prix : {{product.price | number: 2}} €
       p Degré : {{product.alcohol}}°
 
     div.modal-footer

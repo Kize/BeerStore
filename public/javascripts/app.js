@@ -3,7 +3,8 @@
 var myApp = angular.module('beerApp', [
   'ngRoute',
   'ui.bootstrap',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  "smart-table"
 
 ]);
 
