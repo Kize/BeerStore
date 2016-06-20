@@ -22,6 +22,7 @@ router.get('/:index', function(req, res, next) {
       if (o.price) {
         o.price += o.price * (index - 1) / 10;
       }
+      o.id = ind + (index - 1) * array.length;
     });
     res.send(obj);
   });

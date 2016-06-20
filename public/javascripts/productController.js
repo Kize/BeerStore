@@ -5,8 +5,9 @@ myApp.controller(
     '$http',
     '$location',
     'API_URL',
-    function ($scope, $http, $location, API_URL) {
-
+    'cartService',
+    function ($scope, $http, $location, API_URL, cartService) {
+      $scope.cart = cartService.getCart();
 
       $scope.loadProductsPage = function (index) {
         $http.get(API_URL + '/' + index).then(function (response) {
@@ -16,8 +17,12 @@ myApp.controller(
           }
         });
       };
-
       $scope.loadProductsPage(1);
+
+      $scope.addToCart = function (product) {
+        cartService.addProduct(product);
+        console.log($scope.cart);
+      };
 
 
     }

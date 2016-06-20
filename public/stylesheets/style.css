@@ -17,6 +17,7 @@ a {
 }
 
 .gallery {
+  clear: right;
   overflow: hidden;
 }
 
@@ -28,6 +29,11 @@ a {
   padding: 10px;
   border: solid 1px #dddddd;
 
+}
+
+.cart-button {
+  float: right;
+  margin-right: 15px;
 }
 
 .gallery-icon {
