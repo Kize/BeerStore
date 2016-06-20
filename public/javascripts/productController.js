@@ -1,12 +1,13 @@
 myApp.controller(
-  'productController',
+  'ProductController',
   [
     '$scope',
     '$http',
-    '$location',
     'API_URL',
     'cartService',
-    function ($scope, $http, $location, API_URL, cartService) {
+    '$uibModal',
+
+    function ($scope, $http, API_URL, cartService, $uibModal) {
       $scope.cart = cartService.getCart();
 
       $scope.loadProductsPage = function (index) {
@@ -24,7 +25,48 @@ myApp.controller(
         console.log($scope.cart);
       };
 
+      $scope.open = function (product) {
+        $scope.modalProduct = product;
+        $uibModal.open({
+          templateUrl: 'productModal.html',
+          controller: 'ModalController',
+          resolve : {
+            product: function () {
+              //console.log($scope.modalProduct);
+              return $scope.modalProduct;
+            }
+          }
+        });
+      };
 
+      //cartService.clearCart();
+
+    }
+  ]
+);
+
+myApp.controller(
+  'ModalController',
+  [
+    '$scope',
+    'cartService',
+    '$uibModalInstance',
+    'product',
+
+    function ($scope, cartService, $uibModalInstance, product) {
+      $scope.product = product;
+
+      $scope.addToCart = function () {
+        cartService.addProduct(product);
+        console.log(product);
+
+        $uibModalInstance.close();
+      };
+
+
+      $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+      };
     }
   ]
 );

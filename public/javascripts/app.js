@@ -10,7 +10,6 @@ var myApp = angular.module('beerApp', [
 myApp.config(function ($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     templateUrl: './partials/products'
-    //controller: 'cartController'
   }).when('/cart', {
     templateUrl: './partials/cart'
   }).otherwise({

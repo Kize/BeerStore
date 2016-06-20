@@ -1,11 +1,26 @@
-div(ng-controller='productController')
+div(ng-controller='ProductController')
   a.btn.btn-lg.btn-info.cart-button(role="button" ng-click="") Panier ({{cart.nbProducts}})
+
+  script(type="text/ng-template" id="productModal.html")
+    div.modal-header
+      h3.modal-title {{product.name}}
+
+    div.modal-body
+      img(ng-src='{{product.url_img}}' alt="{{product.name}}")
+      p {{product.desc}}
+      p Prix : {{product.price}} €
+      p Degré : {{product.alcohol}}°
+
+    div.modal-footer
+      button.btn.btn-primary(type="button" ng-click="addToCart()") Ajouter au panier
+      button.btn.btn-warning(type="button" ng-click="cancel()") Fermer
+
 
   div.gallery
     div.product(ng-repeat='product in products')
       div.row
         div.col-xs-6.col-md-4
-          img.gallery-icon(ng-src='{{product.url_img}}' alt="{{product.name}}")
+          img.gallery-icon(ng-src='{{product.url_img}}' alt="{{product.name}}" ng-click="open(product)")
         div.col-xs-6.col-md-8
           p Prix : {{product.price}} €
           p Degré : {{product.alcohol}}°
@@ -13,6 +28,6 @@ div(ng-controller='productController')
             a.btn.btn-primary(role="button" ng-click="addToCart(product)") Ajouter au panier
 
       div.caption.line-clamp
-        h3 {{product.name}}
+        h3.beer-title(ng-click="open(product)") {{product.name}}
         p {{product.desc}}
 

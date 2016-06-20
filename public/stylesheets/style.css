@@ -38,7 +38,13 @@ a {
 
 .gallery-icon {
   max-height: 100px;
+  cursor: pointer;
 }
+
+.beer-title {
+  cursor: pointer;
+}
+
 .caption {
   width: 280px;
   overflow: hidden;
