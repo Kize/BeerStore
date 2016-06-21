@@ -8,7 +8,7 @@ div(ng-controller='ProductController')
     div.modal-body
       img(ng-src='{{product.url_img}}' alt="{{product.name}}")
       p {{product.desc}}
-      p Prix : {{product.price | number: 2}} €
+      p Prix : {{product.price}} €
       p Degré : {{product.alcohol}}°
 
     div.modal-footer
@@ -16,7 +16,7 @@ div(ng-controller='ProductController')
       button.btn.btn-warning(type="button" ng-click="cancel()") Fermer
 
 
-  div.gallery
+  div.gallery(lazy-scroll='loadProductsPage()' lazy-scroll-trigger="90")
     div.product(ng-repeat='product in products')
       div.row
         div.col-xs-6.col-md-4

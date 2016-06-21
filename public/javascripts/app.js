@@ -4,7 +4,8 @@ var myApp = angular.module('beerApp', [
   'ngRoute',
   'ui.bootstrap',
   'LocalStorageModule',
-  "smart-table"
+  "smart-table",
+  "lazy-scroll"
 
 ]);
 

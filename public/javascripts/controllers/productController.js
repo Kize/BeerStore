@@ -8,17 +8,22 @@ myApp.controller(
     '$uibModal',
 
     function ($scope, $http, API_URL, cartService, $uibModal) {
+      var pageIndex = 1;
       $scope.cart = cartService.getCart();
+      $scope.products = [];
 
-      $scope.loadProductsPage = function (index) {
-        $http.get(API_URL + 'products/' + index).then(function (response) {
+      $scope.loadProductsPage = function () {
+        console.log(pageIndex);
+        $http.get(API_URL + 'products/' + pageIndex).then(function (response) {
           if (response.data) {
-            $scope.products = response.data;
-            console.log($scope.products);
+            response.data.forEach(function (p, ind, arr) {
+              $scope.products.push(p);
+            });
+            pageIndex ++;
           }
         });
       };
-      $scope.loadProductsPage(1);
+      $scope.loadProductsPage();
 
       $scope.addToCart = function (product) {
         cartService.addProduct(product);
