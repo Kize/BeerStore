@@ -28,3 +28,38 @@ div.cart-container(ng-controller='CartController')
         td
         td Total
         td.cell-total {{cart.total | number: 2}} €
+
+
+  div
+    form.delivery-form
+      div.form-group.row
+        label.form-control-label.col-sm-2(for='inputFirstName') Nom
+        div.col-sm-4
+          input#inputFirstName.form-control(type='text' ng-model='form.firstName' required)
+
+      div.form-group.row
+        label.form-control-label.col-sm-2(for='inputLastName') Prénom
+        div.col-sm-4
+          input#inputLastName.form-control(type='text' ng-model='form.lastName' required)
+
+      div.form-group.row
+        label.form-control-label.col-sm-2(for='inputStreet') Adresse
+        div.col-sm-8
+          input#inputStreet.form-control(type='text' ng-model='form.street' required)
+
+      div.form-group.row
+        label.form-control-label.col-sm-2(for='inputCity') Ville
+        div.col-sm-4
+          input#inputCity.form-control(type='text' ng-model='form.city' required)
+
+        label.form-control-label.col-sm-2(for='inputZipCode') Code Postal
+        div.col-sm-4
+          input#inputZipCode.form-control(type='number' pattern='[0-9]{5}' ng-model='form.zipCode' required)
+
+      div.form-group.row
+        label.form-control-label.col-sm-2(for='inputCreditCard') Carte de crédit
+        div.col-sm-4
+          input#inputCreditCard.form-control(type='number' pattern='[0-9]{16}' ng-model='form.creditCard' required)
+
+      div.form-group.row
+        button.btn.btn-lg.btn-success(type='submit' ng-click='sendOrder()') Valider la commande

@@ -6,6 +6,14 @@ myApp.controller(
 
     function (cartService, $scope) {
       $scope.cart = cartService.getCart();
+      $scope.form = {
+        firstName   : "",
+        lastName    : "",
+        street      : "",
+        zipCode     : undefined,
+        city        : "",
+        creditCard  : undefined
+      };
 
       $scope.updateQuantity = function () {
         cartService.updateTotal();
@@ -15,6 +23,9 @@ myApp.controller(
         cartService.removeNProducts(beer, beer.quantity);
       };
 
+      $scope.sendOrder = function () {
+
+      }
 
     }
   ]

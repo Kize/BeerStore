@@ -77,10 +77,6 @@ myApp.service(
         });
       };
 
-      var removeProduct = function (product) {
-        removeNProducts(product, 1);
-      };
-
       var updateTotal = function () {
         cart.total = 0;
         cart.nbProducts = 0;
@@ -95,7 +91,6 @@ myApp.service(
         getCart : getCart,
         addProduct : addProduct,
         addNProducts : addNProducts,
-        removeProduct : removeProduct,
         removeNProducts : removeNProducts,
         clearCart : clearCart,
         updateTotal : updateTotal
