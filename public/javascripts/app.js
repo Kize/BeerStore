@@ -24,4 +24,4 @@ myApp.config(function (localStorageServiceProvider) {
     .setPrefix('BeerStore');
 });
 
-myApp.value('API_URL', 'api/products');
+myApp.value('API_URL', 'api/');

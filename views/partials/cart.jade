@@ -1,5 +1,5 @@
 div.cart-container(ng-controller='CartController')
-  h2.modal-title Mon panier
+  h2 Mon panier
 
   table.table.table-striped(st-table='cart.products')
     thead
@@ -30,7 +30,10 @@ div.cart-container(ng-controller='CartController')
         td.cell-total {{cart.total | number: 2}} €
 
 
+  br
   div
+    h2 Informations de livraison et bancaires
+    br
     form.delivery-form
       div.form-group.row
         label.form-control-label.col-sm-2(for='inputFirstName') Nom
@@ -44,7 +47,7 @@ div.cart-container(ng-controller='CartController')
 
       div.form-group.row
         label.form-control-label.col-sm-2(for='inputStreet') Adresse
-        div.col-sm-8
+        div.col-sm-10
           input#inputStreet.form-control(type='text' ng-model='form.street' required)
 
       div.form-group.row

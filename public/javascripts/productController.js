@@ -11,7 +11,7 @@ myApp.controller(
       $scope.cart = cartService.getCart();
 
       $scope.loadProductsPage = function (index) {
-        $http.get(API_URL + '/' + index).then(function (response) {
+        $http.get(API_URL + 'products/' + index).then(function (response) {
           if (response.data) {
             $scope.products = response.data;
             console.log($scope.products);

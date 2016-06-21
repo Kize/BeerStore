@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var partials = require('./routes/partials');
 var products = require('./routes/products');
+var order = require('./routes/order');
 
 var app = express();
 
@@ -19,7 +20,7 @@ app.set('view engine', 'jade');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static( path.join(__dirname, '/bower_components')));
@@ -27,6 +28,7 @@ app.use('/bower_components',  express.static( path.join(__dirname, '/bower_compo
 app.use('/', routes);
 app.use('/partials', partials);
 app.use('/api/products', products);
+app.use('/api/order', order);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

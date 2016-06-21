@@ -3,8 +3,10 @@ myApp.controller(
   [
     'cartService',
     '$scope',
+    '$http',
+    'API_URL',
 
-    function (cartService, $scope) {
+    function (cartService, $scope, $http, API_URL) {
       $scope.cart = cartService.getCart();
       $scope.form = {
         firstName   : "",
@@ -24,7 +26,14 @@ myApp.controller(
       };
 
       $scope.sendOrder = function () {
-
+        $http.post(API_URL + 'order', {cart : $scope.cart, order : $scope.form}).then(function (response) {
+          var res = response.data;
+          if (res.status) {
+            // toast ok message
+          } else {
+            // toast not ok message
+          }
+        });
       }
 
     }
