@@ -30,6 +30,7 @@ myApp.controller(
         $uibModal.open({
           templateUrl: 'productModal.html',
           controller: 'ModalController',
+          size: 'lg',
           resolve : {
             product: function () {
               //console.log($scope.modalProduct);

@@ -9,14 +9,18 @@ div.cart-container(ng-controller='CartController')
         td Prix :
         td Quantité :
         td Total :
+        td
 
     tbody
       tr(ng-repeat='beer in cart.products')
         td {{beer.name}}
         td {{beer.alcohol}} °
         td {{beer.price | number: 2}} €
-        td {{beer.quantity}}
-        td {{(beer.price * beer.quantity) | number: 2}} €
+        td
+          input.form-control.input-quantity(type='number' ng-model='beer.quantity' ng-change='updateQuantity()' min=1 )
+        td {{ (beer.price * beer.quantity) | number: 2}} €
+          button.btn.btn-default.btn-rmv(ng-click='removeBeer(beer)')
+            span.glyphicon.glyphicon-remove
 
       tr.row-total
         td

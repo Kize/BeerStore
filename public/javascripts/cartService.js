@@ -42,11 +42,18 @@ myApp.service(
       var addNProducts = function (product, quantity) {
         cart.nbProducts += quantity;
         cart.total += product.price * quantity;
-        if (cart.products[product.id]) {
-          cart.products[product.id].quantity += quantity;
-        } else {
-          cart.products[product.id] = product;
-          cart.products[product.id].quantity = quantity;
+
+        var found = false;
+        cart.products.forEach(function (p, ind, array) {
+          if (p.id === product.id) {
+            found = true;
+            cart.products[i].quantity += quantity;
+          }
+        });
+
+        if (! found){
+          cart.products.push(product);
+          cart.products[cart.products.length -1].quantity = quantity;
         }
         updateLocalStorage();
       };
@@ -56,20 +63,31 @@ myApp.service(
       };
 
       var removeNProducts = function (product, quantity) {
-        if (cart.products[product.id]) {
-          if (quantity >= cart.products[product.id].quantity) {
-            cart.products[product.id] = null;
-          } else {
-            cart.products[product.id].quantity -= quantity;
+        cart.products.forEach(function (p, ind, arr) {
+          if (p.id === product.id) {
+            if (quantity >= p.quantity) {
+              cart.products.splice(ind,1);
+            } else {
+              cart.products[ind].quantity -= quantity;
+            }
+            cart.nbProducts -= quantity;
+            cart.total -= product.price * quantity;
+            updateLocalStorage();
           }
-          cart.nbProducts -= quantity;
-          cart.total -= product.price * quantity;
-          updateLocalStorage();
-        }
+        });
       };
 
       var removeProduct = function (product) {
         removeNProducts(product, 1);
+      };
+
+      var updateTotal = function () {
+        cart.total = 0;
+        cart.nbProducts = 0;
+        cart.products.forEach(function (p, ind, arr) {
+          cart.total += p.price * p.quantity;
+          cart.nbProducts += p.quantity;
+        });
       };
 
 
@@ -79,7 +97,8 @@ myApp.service(
         addNProducts : addNProducts,
         removeProduct : removeProduct,
         removeNProducts : removeNProducts,
-        clearCart : clearCart
+        clearCart : clearCart,
+        updateTotal : updateTotal
       }
     }
   ]

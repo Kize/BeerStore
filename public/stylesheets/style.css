@@ -33,6 +33,15 @@ a {
   font-weight: bolder;
 }
 
+.input-quantity {
+  width: 75px !important;
+}
+
+.btn-rmv {
+  float: right;
+  margin-right: 20px;
+}
+
 .cell-total {
   color: red;
 }
