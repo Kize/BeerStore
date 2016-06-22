@@ -35,7 +35,6 @@ myApp.controller(
             }
           }
         }
-        console.log(slides);
       };
 
       $scope.loadProductsPage = function () {

@@ -18,14 +18,14 @@ a {
 
 .main-content {
   background-color: #f9f9f9;
-  border: 2px solid #75b1d3;
+  border: 2px solid steelblue;
   border-radius: 15px;
   padding: 10px;
 }
 
 .main-content h2 {
   padding-left: 40px;
-  border-bottom: 1px solid #75b1d3;
+  border-bottom: 1px solid steelblue;
   margin: 0px;
 }
 
@@ -84,7 +84,7 @@ input::-webkit-inner-spin-button {
 .rn-carousel-indicator {
   margin: auto;
   text-align: center;
-  background-color: #75b1d3;
+  background-color: steelblue;
   width: 120px;
   border-radius: 25px;
 }
@@ -125,10 +125,11 @@ input::-webkit-inner-spin-button {
 
 .gallery-button {
   display: inline;
+  float: right;
 }
-.gallery-button a {
+/*.gallery-button a {
   margin-top: 240px;
-}
+}*/
 
 .cursor-pointer {
   cursor: pointer;

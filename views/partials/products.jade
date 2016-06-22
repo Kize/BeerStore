@@ -24,11 +24,15 @@ div(ng-controller='ProductController')
         div.layer.row
           div.col-sm-6
             img.carousel-slide-img.cursor-pointer(ng-src='{{slide.url_img}}' ng-click="open(slide)")
-          div.line-clamp.col-sm-6
-            h4.cursor-pointer(ng-click="open(slide)") {{slide.name}}
-            p {{slide.desc}}
-          p.gallery-button
-            a.btn.btn-primary(role="button" ng-click="addToCart(slide)") Ajouter au panier
+          div.col-sm-5
+            p.row
+              a.btn.btn-lg.btn-warning.gallery-button(role="button" ng-click="addToCart(slide)")
+                span.glyphicon.glyphicon-shopping-cart
+                span  {{slide.price}} €
+            h4.cursor-pointer.row(ng-click="open(slide)") {{slide.name}}
+            div.row
+              p {{slide.desc}}
+
 
     div(rn-carousel-indicators ng-if='slides' slides='slides' rn-carousel-index='carouselIndex')
 
