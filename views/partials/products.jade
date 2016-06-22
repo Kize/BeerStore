@@ -7,12 +7,18 @@ div(ng-controller='ProductController')
       h3.modal-title {{product.name}}
 
     div.modal-body
-      img(ng-src='{{product.url_img}}' alt="{{product.name}}")
-      p {{product.desc}}
-      p Prix : {{product.price}} €
-      p Degré : {{product.alcohol}}°
+      div.row
+        div.col-sm-6
+          p {{product.desc}}
+          p Prix : {{product.price}} €
+          p Degré : {{product.alcohol}}°
+
+        div.col-sm-6
+          img.modal-img(ng-src='{{product.url_img}}' alt="{{product.name}}")
+
 
     div.modal-footer
+      input.form-control(type='number' ng-model='product.quantity')
       button.btn.btn-primary(type="button" ng-click="addToCart()") Ajouter au panier
       button.btn.btn-warning(type="button" ng-click="cancel()") Fermer
 

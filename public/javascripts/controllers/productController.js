@@ -66,14 +66,11 @@ myApp.controller(
           size: 'lg',
           resolve : {
             product: function () {
-              //console.log($scope.modalProduct);
               return $scope.modalProduct;
             }
           }
         });
       };
-
-      //cartService.clearCart();
 
     }
   ]
@@ -88,10 +85,11 @@ myApp.controller(
     'product',
 
     function ($scope, cartService, $uibModalInstance, product) {
+      product.quantity = 1;
       $scope.product = product;
 
       $scope.addToCart = function () {
-        cartService.addProduct(product);
+        cartService.addNProducts(product, product.quantity);
         console.log(product);
 
         $uibModalInstance.close();
