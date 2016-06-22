@@ -11,6 +11,13 @@ a {
   margin: 5% 5%;
 }
 
+.main-content {
+  background-color: #f9f9f9;
+  border: 2px solid #75b1d3;
+  border-radius: 15px;
+  padding: 10px;
+}
+
 .cart-container {
   margin: 5% 15%;
 }
@@ -29,11 +36,7 @@ a {
   margin: 5% 15%;
 }
 
-.row-total {
-  font-weight: bolder;
-}
-
-.row-header {
+.row-bolder {
   font-weight: bolder;
 }
 
@@ -52,12 +55,37 @@ a {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  margin: 0;
 }
 
 /* Product view */
+.carousel-container {
+  margin: auto;
+  width: 700px;
+  height: 400px;
+  color: black;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-slide-img {
+  margin: auto;
+  height: 350px;
+}
+
+.rn-carousel-indicator {
+  margin: auto;
+  text-align: center;
+  background-color: #75b1d3;
+  width: 120px;
+  border-radius: 25px;
+}
+
+.rn-carousel-indicator span {
+  font-size: xx-large;
+}
+
 .gallery {
   clear: right;
   overflow: hidden;
@@ -67,7 +95,7 @@ input::-webkit-inner-spin-button {
   width: 300px;
   height: 250px;
   float: left;
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   border: solid 1px #dddddd;
 
@@ -76,14 +104,22 @@ input::-webkit-inner-spin-button {
 .cart-button {
   float: right;
   margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px !important;
 }
 
 .gallery-icon {
   max-height: 100px;
-  cursor: pointer;
 }
 
-.beer-title {
+.gallery-button {
+  display: inline;
+}
+.gallery-button a {
+  margin-top: 200px;
+}
+
+.cursor-pointer {
   cursor: pointer;
 }
 

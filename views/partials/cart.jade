@@ -3,7 +3,7 @@ div.cart-container(ng-controller='CartController')
 
   table.table.table-striped(st-table='cart.products')
     thead
-      tr.row-header
+      tr.row-bolder
         td Bières :
         td Degré :
         td Prix :
@@ -22,7 +22,7 @@ div.cart-container(ng-controller='CartController')
           button.btn.btn-default.btn-rmv(ng-click='removeBeer(beer)')
             span.glyphicon.glyphicon-remove
 
-      tr.row-total
+      tr.row-bolder
         td
         td
         td

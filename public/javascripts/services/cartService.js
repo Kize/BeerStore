@@ -47,7 +47,7 @@ myApp.service(
         cart.products.forEach(function (p, ind, array) {
           if (p.id === product.id) {
             found = true;
-            cart.products[i].quantity += quantity;
+            cart.products[ind].quantity += quantity;
           }
         });
 

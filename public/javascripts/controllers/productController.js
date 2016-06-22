@@ -11,17 +11,47 @@ myApp.controller(
       var pageIndex = 1;
       $scope.cart = cartService.getCart();
       $scope.products = [];
+      var slides = $scope.slides = [];
+      $scope.carouselIndex = 0;
+
+      var updateCarousel = function (products) {
+        for(var i = 0; i < 5; i++) {
+          var randomPosition = Math.floor((Math.random() * products.length));
+          var alreadyAdded = false;
+
+          while (!alreadyAdded) {
+            var product = products[randomPosition];
+            slides.forEach(function (p, ind, arr) {
+              if (p.id === product.id) {
+                alreadyAdded = true;
+              }
+            });
+            if (alreadyAdded) {
+              randomPosition = Math.floor((Math.random() * products.length));
+              alreadyAdded = false;
+            } else {
+              slides.push(product);
+              alreadyAdded = true;
+            }
+          }
+        }
+        console.log(slides);
+      };
 
       $scope.loadProductsPage = function () {
-        console.log(pageIndex);
-        $http.get(API_URL + 'products/' + pageIndex).then(function (response) {
-          if (response.data) {
-            response.data.forEach(function (p, ind, arr) {
-              $scope.products.push(p);
-            });
-            pageIndex ++;
-          }
-        });
+        if (pageIndex < 11 ) {
+          $http.get(API_URL + 'products/' + pageIndex).then(function (response) {
+            if (response.data) {
+              if (pageIndex === 1 ) {
+                updateCarousel(response.data);
+              }
+              response.data.forEach(function (p, ind, arr) {
+                $scope.products.push(p);
+              });
+              pageIndex ++;
+            }
+          });
+        }
       };
       $scope.loadProductsPage();
 

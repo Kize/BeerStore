@@ -2,10 +2,12 @@
 
 var myApp = angular.module('beerApp', [
   'ngRoute',
+  'ngAnimate',
   'ui.bootstrap',
   'LocalStorageModule',
-  "smart-table",
-  "lazy-scroll"
+  'smart-table',
+  'lazy-scroll',
+  'angular-carousel'
 
 ]);
 

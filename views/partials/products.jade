@@ -1,5 +1,6 @@
 div(ng-controller='ProductController')
-  a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/cart") Votre panier ({{cart.nbProducts}})
+  div.nav
+    a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/cart") Votre panier ({{cart.nbProducts}})
 
   script(type="text/ng-template" id="productModal.html")
     div.modal-header
@@ -16,11 +17,29 @@ div(ng-controller='ProductController')
       button.btn.btn-warning(type="button" ng-click="cancel()") Fermer
 
 
-  div.gallery(lazy-scroll='loadProductsPage()' lazy-scroll-trigger="90")
+  div.main-content
+    h2 À l'affiche
+    ul.carousel-container(rn-carousel rn-carousel-index='carouselIndex' rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered)
+      li(ng-repeat='slide in slides')
+        div.layer.row
+          div.col-sm-6
+            img.carousel-slide-img.cursor-pointer(ng-src='{{slide.url_img}}' ng-click="open(slide)")
+          div.line-clamp.col-sm-6
+            h4.cursor-pointer(ng-click="open(slide)") {{slide.name}}
+            p {{slide.desc}}
+          p.gallery-button
+            a.btn.btn-primary(role="button" ng-click="addToCart(slide)") Ajouter au panier
+
+    div(rn-carousel-indicators ng-if='slides' slides='slides' rn-carousel-index='carouselIndex')
+
+  br
+
+  div.gallery.main-content(lazy-scroll='loadProductsPage()' lazy-scroll-trigger="90")
+    h2 Les bières
     div.product(ng-repeat='product in products')
       div.row
         div.col-xs-6.col-md-4
-          img.gallery-icon(ng-src='{{product.url_img}}' alt="{{product.name}}" ng-click="open(product)")
+          img.gallery-icon.cursor-pointer(ng-src='{{product.url_img}}' alt="{{product.name}}" ng-click="open(product)")
         div.col-xs-6.col-md-8
           p Prix : {{product.price}} €
           p Degré : {{product.alcohol}}°
@@ -28,6 +47,6 @@ div(ng-controller='ProductController')
             a.btn.btn-primary(role="button" ng-click="addToCart(product)") Ajouter au panier
 
       div.caption.line-clamp
-        h3.beer-title(ng-click="open(product)") {{product.name}}
+        h3.cursor-pointer(ng-click="open(product)") {{product.name}}
         p {{product.desc}}
 
