@@ -1,37 +1,47 @@
 div.cart-container(ng-controller='CartController')
-  h2 Mon panier
+  div.nav
+    a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/cart") Retour aux produits
 
-  table.table.table-striped(st-table='cart.products')
-    thead
-      tr.row-bolder
-        td Bières :
-        td Degré :
-        td Prix :
-        td Quantité :
-        td Total :
-        td
+  div.main-content
+    h2 Mon panier
 
-    tbody
-      tr(ng-repeat='beer in cart.products')
-        td {{beer.name}}
-        td {{beer.alcohol}} °
-        td {{beer.price | number: 2}} €
-        td
-          input.form-control.input-quantity(type='number' ng-model='beer.quantity' ng-change='updateQuantity()' min=1 )
-        td {{ (beer.price * beer.quantity) | number: 2}} €
-          button.btn.btn-default.btn-rmv(ng-click='removeBeer(beer)')
-            span.glyphicon.glyphicon-remove
+    table.table.table-striped(st-table='cart.products')
+      thead
+        tr.row-bolder
+          td Bières :
+          td Degré :
+          td Prix :
+          td Quantité :
+          td Total :
+          td
 
-      tr.row-bolder
-        td
-        td
-        td
-        td Total
-        td.cell-total {{cart.total | number: 2}} €
+      tbody
+        tr(ng-if='cart.products.length ===0')
+          td Le panier est vide.
+          td
+          td
+          td
+          td
+        tr(ng-repeat='beer in cart.products')
+          td {{beer.name}}
+          td {{beer.alcohol}} °
+          td {{beer.price | number: 2}} €
+          td
+            input.form-control.input-quantity(type='number' ng-model='beer.quantity' ng-change='updateQuantity()' min=1 )
+          td {{ (beer.price * beer.quantity) | number: 2}} €
+            button.btn.btn-default.btn-rmv(ng-click='removeBeer(beer)')
+              span.glyphicon.glyphicon-remove
+
+        tr.row-bolder
+          td
+          td
+          td
+          td Total
+          td.cell-total {{cart.total | number: 2}} €
 
 
   br
-  div
+  div.main-content
     h2 Informations de livraison et bancaires
     br
     form.delivery-form
@@ -65,4 +75,6 @@ div.cart-container(ng-controller='CartController')
           input#inputCreditCard.form-control(type='number' pattern='[0-9]{16}' ng-model='form.creditCard' required)
 
       div.form-group.row
-        button.btn.btn-lg.btn-success(type='submit' ng-click='sendOrder()') Valider la commande
+        div.col-sm-8
+        div.col-sm-2
+          button.btn.btn-success(type='submit' ng-click='sendOrder()') Valider la commande
