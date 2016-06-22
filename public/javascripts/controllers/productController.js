@@ -8,7 +8,7 @@ myApp.controller(
     '$uibModal',
 
     function ($scope, $http, API_URL, cartService, $uibModal) {
-      var pageIndex = 1;
+      var pageIndex = 0;
       $scope.cart = cartService.getCart();
       $scope.products = [];
       var slides = $scope.slides = [];
@@ -40,6 +40,7 @@ myApp.controller(
 
       $scope.loadProductsPage = function () {
         if (pageIndex < 11 ) {
+          pageIndex ++;
           $http.get(API_URL + 'products/' + pageIndex).then(function (response) {
             if (response.data) {
               if (pageIndex === 1 ) {
@@ -48,7 +49,6 @@ myApp.controller(
               response.data.forEach(function (p, ind, arr) {
                 $scope.products.push(p);
               });
-              pageIndex ++;
             }
           });
         }
@@ -57,7 +57,6 @@ myApp.controller(
 
       $scope.addToCart = function (product) {
         cartService.addProduct(product);
-        console.log($scope.cart);
       };
 
       $scope.open = function (product) {

@@ -19,6 +19,12 @@ a {
   padding: 10px;
 }
 
+.main-content h2 {
+  padding-left: 40px;
+  border-bottom: 1px solid #75b1d3;
+  margin: 0px;
+}
+
 .cart-container {
   margin: 5% 15%;
 }
@@ -63,6 +69,7 @@ input::-webkit-inner-spin-button {
 /* Product view */
 .carousel-container {
   margin: auto;
+  margin-top: 25px;
   width: 700px;
   height: 400px;
   color: black;
@@ -92,6 +99,10 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
 }
 
+.products {
+  margin-top: 25px;
+}
+
 .product {
   width: 300px;
   height: 250px;
@@ -117,7 +128,7 @@ input::-webkit-inner-spin-button {
   display: inline;
 }
 .gallery-button a {
-  margin-top: 200px;
+  margin-top: 240px;
 }
 
 .cursor-pointer {
