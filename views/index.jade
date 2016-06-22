@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  div.header
-    div.title
-      h1.title Bienvenue dans votre magasin de bières belges
+  div.jumbotron.jumbotron-fluid.header
+    div.container
+      h1.display-3 BeerStore
+      p.lead Bienvenue dans votre magasin de bières belges.
 
   div.content(ng-view)
 

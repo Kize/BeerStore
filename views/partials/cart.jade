@@ -1,6 +1,6 @@
 div.cart-container(ng-controller='CartController')
   div.nav
-    a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/cart") Retour aux produits
+    a.btn.btn-lg.btn-info.cart-button(role="button" href="/#/") Retour aux produits
 
   div.main-content
     h2 Mon panier
@@ -74,7 +74,7 @@ div.cart-container(ng-controller='CartController')
         div.col-sm-4
           input#inputCreditCard.form-control(type='number' pattern='[0-9]{16}' ng-model='form.creditCard' required)
 
+      br
       div.form-group.row
-        div.col-sm-8
-        div.col-sm-2
+        div.col-sm-12
           button.btn.btn-success(type='submit' ng-click='sendOrder()') Valider la commande

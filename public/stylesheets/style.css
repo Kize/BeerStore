@@ -8,8 +8,12 @@ a {
   color: #00B7FF;
 }
 
+.header {
+  margin: auto 5%;
+}
+
 .content {
-  margin: 5% 5%;
+  margin: 25px 5%;
 }
 
 .main-content {
@@ -27,11 +31,6 @@ a {
 
 .cart-container {
   margin: 5% 15%;
-}
-
-.title {
-  margin: 0 auto;
-  text-align: center;
 }
 
 .delivery-form input.ng-invalid.ng-touched {
