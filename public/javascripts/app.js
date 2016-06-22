@@ -7,7 +7,8 @@ var myApp = angular.module('beerApp', [
   'LocalStorageModule',
   'smart-table',
   'lazy-scroll',
-  'angular-carousel'
+  'angular-carousel',
+  'toaster'
 
 ]);
 

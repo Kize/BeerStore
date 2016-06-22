@@ -3,11 +3,9 @@ myApp.service(
   [
     '$http',
     'localStorageService',
+    'toaster',
 
-    function(
-      $http,
-      localStorageService
-    ) {
+    function($http, localStorageService, toaster) {
       var cart = {
         nbProducts : 0,
         total : 0,
@@ -48,12 +46,14 @@ myApp.service(
           if (p.id === product.id) {
             found = true;
             cart.products[ind].quantity += quantity;
+            toaster.pop('success', 'La produit a été ajouté au panier', cart.products[ind].quantity + " x " + product.name);
           }
         });
 
         if (! found){
           cart.products.push(product);
           cart.products[cart.products.length -1].quantity = quantity;
+          toaster.pop('success', 'La produit a été ajouté au panier', quantity + " x " + product.name);
         }
         updateLocalStorage();
       };
@@ -84,6 +84,7 @@ myApp.service(
           cart.total += p.price * p.quantity;
           cart.nbProducts += p.quantity;
         });
+        toaster.pop('success', 'Le panier a été mis à jour.', cart.total + " €");
       };
 
 
