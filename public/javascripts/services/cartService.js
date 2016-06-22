@@ -21,12 +21,12 @@ myApp.service(
       init();
 
       var clearCart = function () {
-        localStorageService.remove('cart');
         cart = {
           nbProducts : 0,
           total : 0,
           products : []
         };
+        updateLocalStorage();
       };
 
       var updateLocalStorage = function () {
@@ -73,6 +73,7 @@ myApp.service(
             cart.nbProducts -= quantity;
             cart.total -= product.price * quantity;
             updateLocalStorage();
+            toaster.pop('success', 'Le panier a été mis à jour.', cart.total + " €");
           }
         });
       };
@@ -84,6 +85,7 @@ myApp.service(
           cart.total += p.price * p.quantity;
           cart.nbProducts += p.quantity;
         });
+        updateLocalStorage();
         toaster.pop('success', 'Le panier a été mis à jour.', cart.total + " €");
       };
 

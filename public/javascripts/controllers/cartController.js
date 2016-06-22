@@ -5,8 +5,11 @@ myApp.controller(
     '$scope',
     '$http',
     'API_URL',
+    'toaster',
+    '$location',
+    '$timeout',
 
-    function (cartService, $scope, $http, API_URL) {
+    function (cartService, $scope, $http, API_URL, toaster, $location, $timeout) {
       $scope.cart = cartService.getCart();
       $scope.form = {
         firstName   : "",
@@ -29,9 +32,24 @@ myApp.controller(
         $http.post(API_URL + 'order', {cart : $scope.cart, order : $scope.form}).then(function (response) {
           var res = response.data;
           if (res.status) {
-            // toast ok message
+            toaster.pop({
+              type: 'success',
+              title: '',
+              body: res.message,
+              timeout: 3500
+            });
+
+            $timeout(function(){
+              cartService.clearCart();
+              $location.path('/');
+            }, 1000);
           } else {
-            // toast not ok message
+            toaster.pop({
+              type: 'error',
+              title: '',
+              body: res.message,
+              timeout: 3500
+            });
           }
         });
       }
