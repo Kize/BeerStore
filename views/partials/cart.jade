@@ -44,7 +44,7 @@ div.cart-container(ng-controller='CartController')
   div.main-content
     h2 Informations de livraison et bancaires
     br
-    form.delivery-form
+    form.delivery-form(name='orderForm')
       div.form-group.row
         label.form-control-label.col-sm-2(for='inputFirstName') Nom
         div.col-sm-4
@@ -77,4 +77,4 @@ div.cart-container(ng-controller='CartController')
       br
       div.form-group.row
         div.col-sm-12
-          button.btn.btn-success(type='submit' ng-click='sendOrder()') Valider la commande
+          button.btn.btn-success(type='submit' ng-click='sendOrder()' ng-disabled='orderForm.$invalid') Valider la commande
